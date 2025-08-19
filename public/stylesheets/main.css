@@ -7,10 +7,18 @@ body {
   float: left;
   margin: 0 !important;
 }
+#todayContainer{
+  padding-bottom: 10px;
+}
+#currentDateLabel{
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
 #messageSpan{
   margin-top: 15px;
   float: left;
   width: 100%;
+  color: blue;
 }
 
 #dateTester{

@@ -1,6 +1,9 @@
 extends ./layout.pug
 block content
   #dateTester
+    div#todayContainer
+      span#currentDateLabel Today is:
+      span#currentDateSpan
     label(for="testDate") Select a Date:
     input(type="date", id="testDatePicker")
     div#messageSpan

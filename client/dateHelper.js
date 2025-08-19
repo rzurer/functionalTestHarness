@@ -12,6 +12,9 @@ exports.initialize = function (dateFunctions) {
     isAfter = function (date, dateToCompare) {
       return dateFunctions.isAfter(date, dateToCompare);
     },
+    isEqual = function (date, dateToCompare) {
+      return dateFunctions.isEqual(date, dateToCompare);
+    },
     getShortMonthShortDayYear = function (dateString) {
       return dateFunctions.format(new Date(dateString), 'MM-dd-yyyy');
     },
@@ -299,6 +302,7 @@ exports.initialize = function (dateFunctions) {
     getFromDate: getFromDate,
     isBefore: isBefore,
     isAfter: isAfter,
+    isEqual: isEqual,
     format: format
   };
 };
