@@ -16,8 +16,7 @@
     "nodemon": "*"
   },
   "scripts": {
-    "start": "node app.js",
-    "startLocal": "nodemon app.js --ignore public/javascripts/bundle.js -e js,pug,json,css,txt"
+    "start": "nodemon app.js --ignore public/javascripts/bundle.js -e js,pug,json,css,txt"
   },
   "engines": {
     "node": "22.11.0"
