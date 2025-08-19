@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    title Title
+    link(rel="stylesheet", href="//fonts.googleapis.com/css?family=Muli", type='text/css')
+    link(rel="stylesheet", href="/stylesheets/main.css")    
+    link(rel="image_src",  href="imageSrc")
+    meta(name="viewport" content="width=device-width,initial-scale=1.0")
+    meta(name="og:title", content="content")
+    meta(name="og:type", content="product")
+    meta(name="og:url", content="url")
+    meta(name="og:image", content="image")
+    meta(name="og:site_name", content="site name")
+    meta(name="og:description", content="description")
+    script(type="text/javascript", src="/javascripts/jquery.js")
+    script(type="text/javascript", src="/javascripts/bundle.js?v=2025_08-18")
+  body
+    .content
+      #display
+      block content
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-52309717-1', 'auto');
+      ga('send', 'pageview');

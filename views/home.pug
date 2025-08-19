@@ -1,0 +1,10 @@
+extends ./layout.pug
+block content
+  #dateTester
+    label(for="testDate") Select a Date:
+    input(type="date", id="testDatePicker")
+    div#messageSpan
+  script.
+    $(function () {
+      initializeLayout("home");
+    });

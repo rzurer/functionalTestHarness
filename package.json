@@ -1,0 +1,28 @@
+{
+  "name": "functionalTestHarness",
+  "description": "A bare bones node express app for running functional tests",
+  "version": "0.0.1-00",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "serve-favicon": "*",
+    "date-fns": "3.6.0",
+    "glob": "10.4.1",
+    "browserify": "*",
+    "express": "*",
+    "pug": "*"
+  },
+  "devDependencies": {
+    "chai": "^4.5.0",
+    "nodemon": "*"
+  },
+  "scripts": {
+    "start": "nodemon app.js --ignore public/javascripts/bundle.js -e js,pug,json,css,txt"
+  },
+  "engines": {
+    "node": "22.11.0"
+  },
+  "domains": [],
+  "repository": {
+    "url": "https://github.com/rzurer/functionalTestHarness.git"
+  }
+}
