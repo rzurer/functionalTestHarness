@@ -6,6 +6,38 @@ exports.initialize = function (dateFunctions) {
     format = function (date, dateFormat) {
       return dateFunctions.format(date, dateFormat);
     },
+    compareCurrentDateToChosenDate = function (chosenDateString, comparison) {
+      const getCurrentDate = function () {
+          const date = new Date(),
+            year = date.getFullYear(),
+            month = date.getMonth(),
+            day = date.getDate();
+          return new Date(year, month, day);
+        },
+        getChosenDate = function () {
+          const regex = /^\d{4}-\d{2}-\d{2}$/,
+            year = Number(chosenDateString.substring(0, 4)),
+            month = Number(chosenDateString.substring(5, 7)) - 1,
+            day = Number(chosenDateString.substring(8));
+          if (!regex.test(chosenDateString)) {
+            return new Date(chosenDateString);
+          }
+          return new Date(year, month, day);
+        },
+        currentDate = getCurrentDate(),
+        chosenDate = getChosenDate();
+      switch (comparison) {
+        case 'before':{
+          return isBefore(currentDate, chosenDate);
+        }
+        case 'after':{
+          return isAfter(currentDate, chosenDate);
+        }
+        case 'equal':{
+          return isEqual(currentDate, chosenDate);
+        }
+      }
+    },
     isBefore = function (date, dateToCompare) {
       return dateFunctions.isBefore(date, dateToCompare);
     },
@@ -303,6 +335,7 @@ exports.initialize = function (dateFunctions) {
     isBefore: isBefore,
     isAfter: isAfter,
     isEqual: isEqual,
+    compareCurrentDateToChosenDate: compareCurrentDateToChosenDate,
     format: format
   };
 };
