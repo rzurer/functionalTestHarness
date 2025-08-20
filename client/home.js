@@ -33,22 +33,6 @@ exports.initialize = function (dateHelper) {
       }
       messageSpan.text(`Today is after ${chosenDateString}.`);
     };
-    // dislayDateCalculation = function () {
-    //   const currentDate = getCurrentDate(),
-    //     chosenDate = getChosenDate(),
-    //     chosenDateIsEqualToCurrentDate = dateHelper.isEqual(chosenDate, currentDate),
-    //     chosenDateIsAfterCurrentDate = dateHelper.isAfter(chosenDate, currentDate),
-    //     chosenDateString = dateHelper.format(chosenDate, 'MM-dd-yyyy');
-    //   if (chosenDateIsEqualToCurrentDate) {
-    //     messageSpan.text(`Today is ${chosenDateString}.`);
-    //     return;
-    //   }
-    //   if (chosenDateIsAfterCurrentDate) {
-    //     messageSpan.text(`Today is before ${chosenDateString}.`);
-    //     return;
-    //   }
-    //   messageSpan.text(`Today is after ${chosenDateString}.`);
-    // };
   currentDateSpan.text(dateHelper.format(getCurrentDate(), 'MM-dd-yyyy'));
   testDatePicker.on('change', dislayDateCalculation);
 };
